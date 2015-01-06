@@ -6,10 +6,10 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="mailto:a.semenov@unipro.ru">
 <meta name="assert" content="CREATED callback is invoked after custom element instance is created and its definition is registered">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#types-of-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -90,7 +90,7 @@ test(function() {
 }, 'Test created callback if custom element is unresolved.');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
     assert_equals(proto.createdCallbackCalledCounter, 1, 'Callback created should be called');
@@ -98,7 +98,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
     'Document has browsing context');
 
 
-testInIFrame('../../resources/register-and-create-custom-element.html', function(doc) {
+testInIFrame('../..../../../resources/register-and-create-custom-element.html', function(doc) {
     assert_equals(doc.querySelector('#log').innerText, 'Created callback was called',
         'Callback created should be called');
 }, 'Test created callback is called after custom element is registered and created. ' +
@@ -139,7 +139,7 @@ test(function(){
 }, 'Test created callback. Create several custom elements using different ways');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
 
     var GeneratedConstructor = doc.registerElement('x-element', {prototype: proto});

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="/resources/testharness.js"></script>
-    <script src="/resources/testharnessreport.js"></script>
+    <script src="../resources/testharness.js"></script>
+    <script src="../resources/testharnessreport.js"></script>
     <title>XMLHttpRequest: The send() method: timeout is not 0 </title>
     <link rel="help" href="https://xhr.spec.whatwg.org/#the-timeout-attribute" data-tested-assertations="following::ol[1]/li[2]" />
     <link rel="help" href="https://xhr.spec.whatwg.org/#infrastructure-for-the-send()-method" data-tested-assertations="following::dt[5] following::a[contains(@href,'#timeout-error')]/.." />
@@ -54,7 +54,7 @@
                 content += "[" + i + "]";
             }
 
-            xhr.open("POST", "./resources/trickle.py", true);
+            xhr.open("POST", ".../resources/trickle.py", true);
             xhr.timeout = 1;
             xhr.send(content);
         });

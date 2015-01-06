@@ -1,6 +1,6 @@
 <!--
 try {
-  var source = new EventSource("../resources/message.py")
+  var source = new EventSource("..../../resources/message.py")
   postMessage([true, source.url])
   source.close()
 } catch(e) {
@@ -11,8 +11,8 @@ try {
 <html>
   <head>
     <title>dedicated worker - EventSource: url</title>
-    <script src="/resources/testharness.js"></script>
-    <script src="/resources/testharnessreport.js"></script>
+    <script src="../../resources/testharness.js"></script>
+    <script src="../../resources/testharnessreport.js"></script>
   </head>
   <body>
     <div id="log"></div>

@@ -2,7 +2,7 @@
 onconnect = function(e) {
 try {
   var port = e.ports[0]
-  var source = new EventSource("../resources/message.py")
+  var source = new EventSource("..../../resources/message.py")
   source.onmessage = function(e) {
     port.postMessage([true, e.data])
     this.close()
@@ -16,8 +16,8 @@ try {
 <html>
   <head>
     <title>shared worker - EventSource: onmessage</title>
-    <script src="/resources/testharness.js"></script>
-    <script src="/resources/testharnessreport.js"></script>
+    <script src="../../resources/testharness.js"></script>
+    <script src="../../resources/testharnessreport.js"></script>
   </head>
   <body>
     <div id="log"></div>

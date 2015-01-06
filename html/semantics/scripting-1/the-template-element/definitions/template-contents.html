@@ -5,10 +5,10 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="The template contents must be a DocumentFragment">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-html-templates-20130214/#definitions">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../../../resources/testharness.js"></script>
+<script src="../../../../../resources/testharnessreport.js"></script>
 <script src='../testcommon.js'></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -106,7 +106,7 @@ test(function() {
         + 'containing a text node)');
 
 
-testInIFrame('../resources/template-contents-empty.html', function(context) {
+testInIFrame('..../../../../../resources/template-contents-empty.html', function(context) {
     var doc = context.iframes[0].contentDocument;
 
     var template = doc.querySelector('template');
@@ -121,7 +121,7 @@ testInIFrame('../resources/template-contents-empty.html', function(context) {
         + 'inside HTML file loaded in iframe)');
 
 
-testInIFrame('../resources/template-contents.html', function(context) {
+testInIFrame('..../../../../../resources/template-contents.html', function(context) {
     var doc = context.iframes[0].contentDocument;
 
     var template = doc.querySelector('template');
@@ -135,7 +135,7 @@ testInIFrame('../resources/template-contents.html', function(context) {
         + 'tag inside HTML file loaded in iframe)');
 
 
-testInIFrame('../resources/template-contents-text.html', function(context) {
+testInIFrame('..../../../../../resources/template-contents-text.html', function(context) {
     var doc = context.iframes[0].contentDocument;
 
     var template = doc.querySelector('template');
@@ -149,7 +149,7 @@ testInIFrame('../resources/template-contents-text.html', function(context) {
         + 'with some text inside HTML file loaded in iframe)');
 
 
-testInIFrame('../resources/template-contents-nested.html', function(context) {
+testInIFrame('..../../../../../resources/template-contents-nested.html', function(context) {
     var doc = context.iframes[0].contentDocument;
 
     var template = doc.querySelector('template');

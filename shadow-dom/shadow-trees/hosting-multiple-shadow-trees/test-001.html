@@ -14,10 +14,10 @@ policies and contribution forms [3].
 <link rel="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-shadow-dom-20130514/#multiple-shadow-subtrees">
 <meta name="assert" content="Hosting Multiple Shadow Subtrees:The shadow insertion point designates a place in the shadow DOM subtree, where an older tree is inserted when rendering">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -28,7 +28,7 @@ var A_04_05_01_T1 = async_test('A_04_05_01_T01');
 // Check that only the younger tree is visible if there's no shadow insertion point
 A_04_05_01_T1.step(function () {
     var iframe = document.createElement('iframe');
-    iframe.src = '../../resources/bobs_page.html';
+    iframe.src = '../..../../../resources/bobs_page.html';
     document.body.appendChild(iframe);
 
     iframe.onload = A_04_05_01_T1.step_func(function () {
@@ -79,7 +79,7 @@ var A_04_05_01_T2 = async_test('A_04_05_01_T02');
 
 A_04_05_01_T2.step(function () {
     var iframe = document.createElement('iframe');
-    iframe.src = '../../resources/bobs_page.html';
+    iframe.src = '../..../../../resources/bobs_page.html';
     document.body.appendChild(iframe);
 
     iframe.onload = A_04_05_01_T2.step_func(function () {

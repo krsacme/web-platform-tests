@@ -97,7 +97,7 @@
             
             /*  Scheme-Based Normalization */
             [TC_name + " Scheme-Based Normalization: domain:/", 
-            tmp_domain + ':/resources/ImaGes/~t/%7b!a%7d/~sth.png']
+            tmp_domain + ':../resources/ImaGes/~t/%7b!a%7d/~sth.png']
         ];
 
         CaseNormalizationXHRtests.forEach(function (data, i) {
@@ -191,7 +191,7 @@
             
             /* 	Character Normalization in Domain	*/
             [TC_name, window.location.protocol + "//" + window.location.host.toUpperCase() 
-            + "/resources/ImaGes/{{a}}/Test_1/$a/sth34!.png", 
+            + "../resources/ImaGes/{{a}}/Test_1/$a/sth34!.png", 
             domain + "resources/ImaGes/%7B%7Ba%7D%7D/Test_1/$a/sth34!.png", true]
         ];
 

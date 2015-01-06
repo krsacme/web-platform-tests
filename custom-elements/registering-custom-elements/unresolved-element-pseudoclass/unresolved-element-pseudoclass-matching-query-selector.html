@@ -6,10 +6,10 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="mailto:a.semenov@unipro.ru">
 <meta name="assert" content="The :unresolved pseudoclass must match all custom elements whose created callback has not yet been invoked">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#unresolved-element-pseudoclass">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -111,7 +111,7 @@ test(function() {
     'by Document.querySelector(\':unresolved\')');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var customElement = doc.querySelector(':unresolved');
 
     assert_not_equals(customElement, null,

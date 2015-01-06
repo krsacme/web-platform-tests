@@ -14,10 +14,10 @@ policies and contribution forms [3].
 <link rel="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-shadow-dom-20130514/#multiple-shadow-subtrees">
 <meta name="assert" content="Hosting Multiple Shadow Subtrees:If multiple shadow insertion points exist in a shadow DOM subtree, only the first, in tree order, is recognized">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -26,7 +26,7 @@ var A_04_05_02_T1 = async_test('A_04_05_02_T01');
 
 A_04_05_02_T1.step(function () {
     var iframe = document.createElement('iframe');
-    iframe.src = '../../resources/bobs_page.html';
+    iframe.src = '../..../../../resources/bobs_page.html';
     document.body.appendChild(iframe);
 
     iframe.onload = A_04_05_02_T1.step_func(function () {

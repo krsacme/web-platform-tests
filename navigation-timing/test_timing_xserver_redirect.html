@@ -5,8 +5,8 @@
         <title>window.performance.timing.redirect attributes on a cross-origin server redirected navigation</title>
         <link rel="author" title="Microsoft" href="http://www.microsoft.com/" />
         <link rel="help" href="http://www.w3.org/TR/navigation-timing/#sec-navigation-timing-interface"/>
-        <script src="/resources/testharness.js"></script>
-        <script src="/resources/testharnessreport.js"></script>
+        <script src="../resources/testharness.js"></script>
+        <script src="../resources/testharnessreport.js"></script>
         <script src="resources/webperftestharness.js"></script>
         <script src="/common/utils.js"></script>
         <script>
@@ -60,7 +60,7 @@
             var destUrl = make_absolute_url({subdomain: subdomain,
                                              path: "/common/redirect.py",
                                              query: "location=" + make_absolute_url(
-                                                         {path: "/navigation-timing/resources/blank_page_green.html"})
+                                                         {path: "/navigation-timing../resources/blank_page_green.html"})
                                              });
             var frameContext = document.getElementById("frameContext");
             frameContext.onload = onload_test;

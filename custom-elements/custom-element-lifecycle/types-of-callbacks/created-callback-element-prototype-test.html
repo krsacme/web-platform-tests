@@ -6,10 +6,10 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="The custom element prototype must be set just prior to invoking callback.">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#types-of-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -76,7 +76,7 @@ test(function() {
     'via constructor returned by method registerElement');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
     assert_equals(proto.createdCallbackThis.constructor.prototype, proto,

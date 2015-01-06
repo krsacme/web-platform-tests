@@ -6,10 +6,10 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="mailto:a.semenov@unipro.ru">
 <meta name="assert" content="If parser is in 'in body' insertion mode and meets HEAD token it should be ignored">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-html-templates-20130214/#in-body-addition">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../../../resources/testharness.js"></script>
+<script src="../../../../../resources/testharnessreport.js"></script>
 <script src='../../testcommon.js'></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -115,7 +115,7 @@ test(function() {
     + 'Test HEAD tag inside template tag assigned to another template\'s innerHTML');
 
 
-testInIFrame('../../resources/template-contents-head.html', function(context) {
+testInIFrame('../..../../../../../resources/template-contents-head.html', function(context) {
     var doc = context.iframes[0].contentDocument;
 
     var template = doc.body.querySelector('template');

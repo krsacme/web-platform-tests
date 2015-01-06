@@ -1,6 +1,6 @@
 <!--
 try {
-  var source = new EventSource("../resources/message.py")
+  var source = new EventSource("..../../resources/message.py")
   source.onopen = function(e) {
     postMessage([true, source.readyState, 'data' in e, e.bubbles, e.cancelable])
     this.close()
@@ -13,8 +13,8 @@ try {
 <html>
   <head>
     <title>dedicated worker - EventSource: onopen (announcing the connection)</title>
-    <script src="/resources/testharness.js"></script>
-    <script src="/resources/testharnessreport.js"></script>
+    <script src="../../resources/testharness.js"></script>
+    <script src="../../resources/testharnessreport.js"></script>
   </head>
   <body>
     <div id="log"></div>

@@ -4,8 +4,8 @@
     <meta charset=utf-8>
     <title>EventSource: cross-origin</title>
     <meta name=author title="Odin Hørthe Omdal" href="mailto:odiho@opera.com">
-    <script src="/resources/testharness.js"></script>
-    <script src="/resources/testharnessreport.js"></script>
+    <script src="../resources/testharness.js"></script>
+    <script src="../resources/testharnessreport.js"></script>
   </head>
   <body>
     <div id="log"></div>
@@ -27,7 +27,7 @@
 
       doCORS(crossdomain + "resources/cors.py?run=message",
         "basic use")
-      doCORS(crossdomain + "resources/cors.py?run=redirect&location=/eventsource/resources/cors.py?run=message",
+      doCORS(crossdomain + "resources/cors.py?run=redirect&location=/eventsource../resources/cors.py?run=message",
         "redirect use")
       doCORS(crossdomain + "resources/cors.py?run=status-reconnect&status=200",
         "redirect use recon")

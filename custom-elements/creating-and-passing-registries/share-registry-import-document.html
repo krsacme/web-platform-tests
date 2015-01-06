@@ -5,10 +5,10 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="When creating an import, use the registry of the master document.">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#creating-and-passing-registries">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../resources/testharness.js"></script>
+<script src="../../resources/testharnessreport.js"></script>
 <script src="../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -16,7 +16,7 @@
 var test1 = async_test('Registry of the imported document should be shared with master document. ' +
     'Import is asynchronous');
 test1.step(function() {
-    var iframe = newIFrame('../resources/import-master-async.html');
+    var iframe = newIFrame('..../../resources/import-master-async.html');
     document.body.appendChild(iframe);
     iframe.onload = test1.step_func(function() {
         var doc = iframe.contentDocument;
@@ -43,7 +43,7 @@ test1.step(function() {
 var test2 = async_test('Registry of the master document should be shared with imported document. ' +
     'Import is asynchronous');
 test2.step(function() {
-    var iframe = newIFrame('../resources/import-master-async.html');
+    var iframe = newIFrame('..../../resources/import-master-async.html');
     document.body.appendChild(iframe);
     iframe.onload = test2.step_func(function() {
         var doc = iframe.contentDocument;
@@ -67,7 +67,7 @@ test2.step(function() {
 });
 
 
-testInIFrame('../resources/import-master.html', function(doc) {
+testInIFrame('..../../resources/import-master.html', function(doc) {
     var link = doc.querySelector('link[rel=import]');
     var doc2 = link.import;
     var name = 'x-frame';
@@ -80,7 +80,7 @@ testInIFrame('../resources/import-master.html', function(doc) {
 }, 'Registry of the imported document should be shared with master document. Import is syncronous');
 
 
-testInIFrame('../resources/import-master.html', function(doc) {
+testInIFrame('..../../resources/import-master.html', function(doc) {
     var link = doc.querySelector('link[rel=import]');
     var doc2 = link.import;
     var name = 'x-frame';

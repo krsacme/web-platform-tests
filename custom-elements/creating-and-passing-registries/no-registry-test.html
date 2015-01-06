@@ -6,10 +6,10 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="In all other cases, new documents must not have a registry.">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#creating-and-passing-registries">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../resources/testharness.js"></script>
+<script src="../../resources/testharnessreport.js"></script>
 <script src="../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -40,7 +40,7 @@ async_test(function(t) {
         }
     });
 
-    request.open('GET', '../resources/blank.html', true);
+    request.open('GET', '..../../resources/blank.html', true);
     request.responseType = 'document';
     request.send();
 }, 'XMLHttpRequest\'s asynchronous response HTML document must not have a registry');

@@ -6,10 +6,10 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="Invoke CALLBACK with ELEMENT as callback this value">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#enqueuing-and-invoking-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -26,7 +26,7 @@ test(function() {
 }, 'Test \'this\' value inside created callback.');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
 
@@ -35,7 +35,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
 }, 'Test \'this\' value inside attached callback.');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
 

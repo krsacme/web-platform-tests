@@ -6,10 +6,10 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="mailto:a.semenov@unipro.ru">
 <meta name="assert" content="After a custom element is instantiated, changing the value of the IS attribute must not affect this element's custom element type">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#instantiating-custom-elements">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../resources/testharness.js"></script>
+<script src="../../resources/testharnessreport.js"></script>
 <script src="../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -52,7 +52,7 @@ test(function() {
     'Element is created via innerHTML property');
 
 
-testInIFrame('../resources/x-element.html', function(doc) {
+testInIFrame('..../../resources/x-element.html', function(doc) {
     var GeneratedConstructor = doc.registerElement('x-element');
     doc.registerElement('y-element');
     var customElement = doc.querySelector('#x-element');
@@ -63,7 +63,7 @@ testInIFrame('../resources/x-element.html', function(doc) {
     'Element is defined in loaded HTML document');
 
 
-testInIFrame('../resources/x-element.html', function(doc) {
+testInIFrame('..../../resources/x-element.html', function(doc) {
     var customElement = doc.querySelector('#x-element');
     customElement.setAttribute('is', 'y-element');
     var GeneratedConstructor = doc.registerElement('x-element');

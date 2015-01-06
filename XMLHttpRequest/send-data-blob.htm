@@ -6,8 +6,8 @@
     <link rel="help" href="https://xhr.spec.whatwg.org/#the-responsetype-attribute"  data-tested-assertations="following::ol[1]/li[4]"/>
     <link rel="help" href="https://xhr.spec.whatwg.org/#the-response-attribute"  data-tested-assertations="following::a[contains(@href,'#blob-response-entity-body')]/.."/>
 
-    <script src="/resources/testharness.js"></script>
-    <script src="/resources/testharnessreport.js"></script>
+    <script src="../resources/testharness.js"></script>
+    <script src="../resources/testharnessreport.js"></script>
     <title>XMLHttpRequest: The send() method: Blob data</title>
 </head>
 
@@ -34,7 +34,7 @@
                         blob = xhr.response;
                         assert_true(blob instanceof Blob, "Blob from XHR Response");
 
-                        xhr2.open("POST", "./resources/content.py", true);
+                        xhr2.open("POST", ".../resources/content.py", true);
                         xhr2.send(blob);
                     });
                 }
@@ -53,7 +53,7 @@
                 }
             };
 
-            xhr.open("GET", "./resources/content.py?content=" + content, true);
+            xhr.open("GET", ".../resources/content.py?content=" + content, true);
             xhr.responseType = "blob";
             xhr.send();
         });

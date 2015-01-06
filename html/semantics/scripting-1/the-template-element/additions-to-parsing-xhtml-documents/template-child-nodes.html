@@ -6,10 +6,10 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="a.semenov@unipro.ru">
 <meta name="assert" content="Child nodes of template element in XHTML documents are always appended to the template content (instead of template itself)">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-html-templates-20130214/#parsing-xhtml-documents">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../../../resources/testharness.js"></script>
+<script src="../../../../../resources/testharnessreport.js"></script>
 <script src='../testcommon.js'></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -65,7 +65,7 @@ test(function() {
 
 
 
-testInIFrame('../resources/template-child-nodes-div.xhtml', function(context) {
+testInIFrame('..../../../../../resources/template-child-nodes-div.xhtml', function(context) {
     var doc = context.iframes[0].contentDocument;
 
     var template = doc.querySelector('template');
@@ -79,7 +79,7 @@ testInIFrame('../resources/template-child-nodes-div.xhtml', function(context) {
     + 'Test loading XHTML document from a file');
 
 
-testInIFrame('../resources/template-child-nodes-nested.xhtml', function(context) {
+testInIFrame('..../../../../../resources/template-child-nodes-nested.xhtml', function(context) {
     var doc = context.iframes[0].contentDocument;
 
     var template = doc.querySelector('template');

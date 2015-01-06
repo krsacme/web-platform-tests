@@ -3,8 +3,8 @@
 <head>
     <link rel="help" href="https://xhr.spec.whatwg.org/#the-responsetype-attribute" data-tested-assertations="following::ol[1]/li[4]" />
     <link rel="help" href="https://xhr.spec.whatwg.org/#the-response-attribute" data-tested-assertations="following::a[contains(@href,'#arraybuffer-response-entity-body')]/.." />
-    <script src="/resources/testharness.js"></script>
-    <script src="/resources/testharnessreport.js"></script>
+    <script src="../resources/testharness.js"></script>
+    <script src="../resources/testharnessreport.js"></script>
     <title>XMLHttpRequest: The response attribute: ArrayBuffer data</title>
 </head>
 
@@ -45,7 +45,7 @@
                 }
             };
 
-            xhr.open("GET", "./resources/content.py?content=Hello", true);
+            xhr.open("GET", ".../resources/content.py?content=Hello", true);
             xhr.responseType = "arraybuffer";
             xhr.send();
         });

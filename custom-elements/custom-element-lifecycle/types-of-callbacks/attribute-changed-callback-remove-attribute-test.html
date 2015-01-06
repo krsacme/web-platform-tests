@@ -5,10 +5,10 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="attributeChanged callback must be enqueued whenever custom element's attribute is removed">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#types-of-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -110,7 +110,7 @@ test(function() {
     'The custom element created via innerHTML property and unresolved at first');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
 
@@ -124,7 +124,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
     'The custom element created via constructor and the document has browsing context');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
 
@@ -141,7 +141,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
     'The custom element created via innerHTML property and the document has browsing context');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var customElement = doc.querySelector('#x-element');
     // this should not call or enqueue attributeChangedCallback
     customElement.setAttribute('name', 'someName');

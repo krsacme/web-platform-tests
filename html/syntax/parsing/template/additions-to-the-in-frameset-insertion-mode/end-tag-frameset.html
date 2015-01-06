@@ -5,16 +5,16 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="If parser is in 'in frameset' insertion mode and meets frameset end tag then if the stack of open elements has a template element in html scope then this is a parse error; ignore the token">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-html-templates-20130214/#in-head-addition">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../../../resources/testharness.js"></script>
+<script src="../../../../../resources/testharnessreport.js"></script>
 <script src='../../testcommon.js'></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
 <script type="text/javascript">
 
-testInIFrame('../../resources/frameset-end-tag.html', function(context) {
+testInIFrame('../..../../../../../resources/frameset-end-tag.html', function(context) {
     var doc = context.iframes[0].contentDocument;
 
     var frameset = doc.querySelector('frameset');

@@ -6,10 +6,10 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="All other callbacks must not be enqueued until after the created callback's invocation had started.">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#types-of-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -32,7 +32,7 @@ function newPrototypeWithCallbackLog() {
     return proto;
 }
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto = newPrototypeWithCallbackLog();
     doc.registerElement('x-a', {prototype: proto});
     doc.body.innerHTML = '<x-a></x-a>';
@@ -44,7 +44,7 @@ testInIFrame('../../resources/blank.html', function(doc) {
 }, 'Test attached callback is enqueued after created callback');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto = newPrototypeWithCallbackLog();
     doc.registerElement('x-b', {prototype: proto});
     doc.body.innerHTML = '<x-b id="x-b"></x-b>';
@@ -74,7 +74,7 @@ test(function() {
     'Document has no browsing context');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newPrototypeWithCallbackLog();
     doc.registerElement('x-element', {prototype: proto});
     var customElement = doc.querySelector('#x-element');
@@ -107,7 +107,7 @@ test(function() {
     'Document has no browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto1 = newPrototypeWithCallbackLog();
     proto1.createdCallback = function() {
         proto1.callbackLog.push('created');
@@ -142,7 +142,7 @@ test(function() {
     'Document has no browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(docWithBrowsingContext) {
+testInIFrame('../..../../../resources/blank.html', function(docWithBrowsingContext) {
     var docNoBrowsingContext = newHTMLDocument();
 
     var proto1 = newPrototypeWithCallbackLog();
@@ -172,7 +172,7 @@ testInIFrame('../../resources/blank.html', function(docWithBrowsingContext) {
 }, 'Test attached callback is enqueued after created callback, but before created callback had started');
 
 
-testInIFrame('../../resources/blank.html', function(docWithBrowsingContext) {
+testInIFrame('../..../../../resources/blank.html', function(docWithBrowsingContext) {
     var docNoBrowsingContext = newHTMLDocument();
 
     var proto = newPrototypeWithCallbackLog();
@@ -188,7 +188,7 @@ testInIFrame('../../resources/blank.html', function(docWithBrowsingContext) {
 }, 'Test attached callback is enqueued after created callback had started');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto1 = newPrototypeWithCallbackLog();
     var proto2 = newPrototypeWithCallbackLog();
     proto1.createdCallback = function() {
@@ -207,7 +207,7 @@ testInIFrame('../../resources/blank.html', function(doc) {
 }, 'Test detached callback is not enqueued before created callback had started');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto = newPrototypeWithCallbackLog();
     proto.createdCallback = function() {
         proto.callbackLog.push('created');
@@ -222,7 +222,7 @@ testInIFrame('../../resources/blank.html', function(doc) {
 }, 'Test detached callback is enqueued after created callback had started');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newPrototypeWithCallbackLog();
     doc.registerElement('x-element', {prototype: proto});
 

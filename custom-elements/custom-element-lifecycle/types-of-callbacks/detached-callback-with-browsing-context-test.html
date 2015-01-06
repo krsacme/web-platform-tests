@@ -6,15 +6,15 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="mailto:a.semenov@unipro.ru">
 <meta name="assert" content="detached callback ... must be enqueued whenever custom element is removed from the document and this document has a browsing context.">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#types-of-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
 <script>
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
     var customElement = doc.querySelector('#x-element');
@@ -25,7 +25,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
     'from document with browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     doc.body.innerHTML = '<div id="x-a-parent"><x-a id="x-a"></x-a></div>';
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-a', {prototype: proto});
@@ -37,7 +37,7 @@ testInIFrame('../../resources/blank.html', function(doc) {
     'is removed by method removeChild() from document with browsing context');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
     var customElement = doc.querySelector('#x-element');
@@ -49,7 +49,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
     'from document with browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-b', {prototype: proto});
     doc.body.innerHTML = '<div id="x-b-parent"><x-b id="x-b"></x-b></div>';
@@ -62,7 +62,7 @@ testInIFrame('../../resources/blank.html', function(doc) {
     'is removed by method replaceChild() from document with browsing context');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
     doc.body.innerHTML = '';
@@ -72,7 +72,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
     'innerHTML property in the document with browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     doc.body.innerHTML = '<div><x-c></x-c></div>';
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-c', {prototype: proto});

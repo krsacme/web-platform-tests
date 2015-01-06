@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Cross-domain canvas data must not populate the dataTransfer</title>
-<script src="../../resources/crossorigin.js"></script>
+<script src="../..../../../../../resources/crossorigin.js"></script>
 <style type="text/css">
 div {
 	width:105px;
@@ -27,7 +27,7 @@ p:first-child {
 <p><img id="image" alt="" width="100" height="100" /></p>
 
 <script><![CDATA[
-document.getElementsByTagName("img")[0].src = crossOriginUrl("www", "../../resources/100x100-navy.png");
+document.getElementsByTagName("img")[0].src = crossOriginUrl("www", "../..../../../../../resources/100x100-navy.png");
 
 window.onload = function() {
 	var canvas = document.getElementsByTagName('canvas')[0], div = document.getElementsByTagName('div')[0], failed = [];

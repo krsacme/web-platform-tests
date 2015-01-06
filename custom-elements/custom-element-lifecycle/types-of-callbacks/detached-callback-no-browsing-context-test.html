@@ -6,10 +6,10 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="mailto:a.semenov@unipro.ru">
 <meta name="assert" content="detached callback ... must be enqueued whenever custom element is removed from the document and this document has a browsing context.">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#types-of-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -104,7 +104,7 @@ var loseBrowsingContextTest = async_test('Test detached callback is not called '
     'if document lose browsing context and custom element is removed');
 
 loseBrowsingContextTest.step(function() {
-    var iframe = newIFrame('../../resources/x-element.html');
+    var iframe = newIFrame('../..../../../resources/x-element.html');
     iframe.onload = loseBrowsingContextTest.step_func(function(){
         var doc = iframe.contentDocument;
         var proto = newHTMLElementPrototype();
@@ -125,7 +125,7 @@ var navigateTest = async_test('Test detached callback is not called, ' +
     'if document\'s window is navigated to another document and custom element is removed');
 
 navigateTest.step(function() {
-    var iframe = newIFrame('../../resources/x-element.html');
+    var iframe = newIFrame('../..../../../resources/x-element.html');
     iframe.onload = navigateTest.step_func(function() {
         var doc = iframe.contentDocument;
         var proto = newHTMLElementPrototype();
@@ -140,7 +140,7 @@ navigateTest.step(function() {
             navigateTest.done();
             iframe.remove();
         });
-        iframe.src = '../../resources/blank.html';
+        iframe.src = '../..../../../resources/blank.html';
     });
 });
 </script>

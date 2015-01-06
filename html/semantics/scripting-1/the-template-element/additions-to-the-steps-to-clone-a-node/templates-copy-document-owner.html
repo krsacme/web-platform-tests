@@ -6,10 +6,10 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="a.semenov@unipro.ru">
 <meta name="assert" content="ownerDocument of cloned template content is set to template content owner">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-html-templates-20130214/#node-clone-additions">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../../../resources/testharness.js"></script>
+<script src="../../../../../resources/testharnessreport.js"></script>
 <script src='../testcommon.js'></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -111,7 +111,7 @@ test(function () {
 
 
 
-testInIFrame('../resources/template-contents.html', function(context) {
+testInIFrame('..../../../../../resources/template-contents.html', function(context) {
     var doc = context.iframes[0].contentDocument;
 
     var template = doc.body.querySelector('template');

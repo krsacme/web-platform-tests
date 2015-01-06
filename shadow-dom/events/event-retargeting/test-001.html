@@ -14,10 +14,10 @@ policies and contribution forms [3].
 <link rel="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-shadow-dom-20130514/#event-retargeting">
 <meta name="assert" content="Event Retargeting:test that event.target is retargeted when event crosses shadow boundary and vice versa">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -26,7 +26,7 @@ var A_05_01_01_T1 = async_test('A_05_01_01_T1');
 
 A_05_01_01_T1.step(function () {
     var iframe = document.createElement('iframe');
-    iframe.src = '../../resources/blank.html';
+    iframe.src = '../..../../../resources/blank.html';
     document.body.appendChild(iframe);
 
     iframe.onload = A_05_01_01_T1.step_func(function () {
@@ -67,7 +67,7 @@ var A_05_01_01_T2 = async_test('A_05_01_01_T2');
 
 A_05_01_01_T2.step(function () {
     var iframe = document.createElement('iframe');
-    iframe.src = '../../resources/blank.html';
+    iframe.src = '../..../../../resources/blank.html';
     document.body.appendChild(iframe);
 
     iframe.onload = A_05_01_01_T2.step_func(function () {

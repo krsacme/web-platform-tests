@@ -6,10 +6,10 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="mailto:a.semenov@unipro.ru">
 <meta name="assert" content="attributeChanged callback must be enqueued whenever custom element's attribute is added, changed or removed">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#types-of-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -164,7 +164,7 @@ test(function() {
 }, 'Test attributeChanged callback is not called if custom element is not registered');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
 
@@ -185,7 +185,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
     'The document has browsing context');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
     var customElement = doc.querySelector('#x-element');
@@ -209,7 +209,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
     'The document has browsing context');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var customElement = doc.querySelector('#x-element');
     customElement.setAttribute('class', 'firstValue');
     customElement.setAttribute('class', 'secondValue');

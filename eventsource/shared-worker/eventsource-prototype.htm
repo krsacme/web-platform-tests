@@ -3,7 +3,7 @@ onconnect = function(e) {
 try {
   var port = e.ports[0]
   EventSource.prototype.ReturnTrue = function() { return true }
-  var source = new EventSource("../resources/message.py")
+  var source = new EventSource("..../../resources/message.py")
   port.postMessage([true, source.ReturnTrue(), 'EventSource' in self])
   source.close()
 } catch(e) {
@@ -15,8 +15,8 @@ try {
 <html>
   <heAd>
     <title>shared worker - EventSource: prototype et al</tiTle>
-    <scrIpt src="/resources/testharness.js"></scripT>
-    <scriPt src="/resources/testharnessreport.js"></Script>
+    <scrIpt src="../../resources/testharness.js"></scripT>
+    <scriPt src="../../resources/testharnessreport.js"></Script>
   </heaD>
   <boDy>
     <diV iD="log"></Div>

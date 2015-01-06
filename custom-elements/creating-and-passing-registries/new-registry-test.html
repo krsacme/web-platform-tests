@@ -6,15 +6,15 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="When an HTML Document is loaded in a browsing context, a new registry must be created and associated with this document.">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#creating-and-passing-registries">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../resources/testharness.js"></script>
+<script src="../../resources/testharnessreport.js"></script>
 <script src="../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
 <script>
-testInIFrame('../resources/blank.html', function(doc) {
+testInIFrame('..../../resources/blank.html', function(doc) {
     try {
         doc.registerElement('x-element');
     } catch (e) {
@@ -23,7 +23,7 @@ testInIFrame('../resources/blank.html', function(doc) {
 }, 'Document, loaded into browsing context, must have a new empty registry');
 
 
-testInIFrame('../resources/blank.html', function(loadedDocument) {
+testInIFrame('..../../resources/blank.html', function(loadedDocument) {
     var createdDocument = document.implementation.createHTMLDocument('Test Document');
     // Let's check that loadedDocument and createdDocument use different registeries.
     createdDocument.registerElement('x-element');

@@ -5,10 +5,10 @@
 <meta name="author" title="Aleksei Yu. Semenov" href="mailto:a.semenov@unipro.ru">
 <meta name="assert" content="attached callback ... must be enqueued whenever custom element is inserted into a document and this document has a browsing context.">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#types-of-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -32,7 +32,7 @@ test(function() {
     'without browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(docWithBrowsingContext) {
+testInIFrame('../..../../../resources/blank.html', function(docWithBrowsingContext) {
     var docNoBrowsingContext = newHTMLDocument();
     var proto1 = newHTMLElementPrototype();
     docNoBrowsingContext.registerElement('x-b', {prototype: proto1});
@@ -54,7 +54,7 @@ testInIFrame('../../resources/blank.html', function(docWithBrowsingContext) {
     'document without browsing context to document with browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(docWithBrowsingContext) {
+testInIFrame('../..../../../resources/blank.html', function(docWithBrowsingContext) {
     var proto1 = newHTMLElementPrototype();
     docWithBrowsingContext.registerElement('x-c', {prototype: proto1});
 
@@ -75,7 +75,7 @@ testInIFrame('../../resources/blank.html', function(docWithBrowsingContext) {
     'document with browsing context to document without browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-d', {prototype: proto});
 
@@ -93,7 +93,7 @@ testInIFrame('../../resources/blank.html', function(doc) {
     'with browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-e', {prototype: proto});
 
@@ -118,7 +118,7 @@ var moveTest =  async_test('Test attached callback if moving custom element from
     'document with browsing context to document with browsing context');
 
 moveTest.step(function() {
-    var iframe1 = newIFrame('../../resources/blank.html');
+    var iframe1 = newIFrame('../..../../../resources/blank.html');
     iframe1.onload = moveTest.step_func(function() {
         var doc1 = iframe1.contentDocument;
 
@@ -133,7 +133,7 @@ moveTest.step(function() {
             'Callback attached should be called in documents with browsing context');
 
         // create second iframe
-        var iframe2 = newIFrame('../../resources/x-element.html');
+        var iframe2 = newIFrame('../..../../../resources/x-element.html');
         iframe2.onload = moveTest.step_func(function() {
             var doc2 = iframe2.contentDocument;
             

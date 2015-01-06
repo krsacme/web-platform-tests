@@ -5,16 +5,16 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="The template contents owner document type is HTML document, if template is declared in HTML document">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-html-templates-20130214/#definitions">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../../../resources/testharness.js"></script>
+<script src="../../../../../resources/testharnessreport.js"></script>
 <script src='../testcommon.js'></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
 <script type="text/javascript">
 
-testInIFrame('../resources/template-contents.html', function(context) {
+testInIFrame('..../../../../../resources/template-contents.html', function(context) {
     var doc = context.iframes[0].contentDocument;
     var template = doc.querySelector('template');
 
@@ -26,7 +26,7 @@ testInIFrame('../resources/template-contents.html', function(context) {
     'is created by HTML parser)');
 
 
-testInIFrame('../resources/template-contents.html', function(context) {
+testInIFrame('..../../../../../resources/template-contents.html', function(context) {
     var doc = context.iframes[0].contentDocument;
     var template = doc.createElement('template');
     var div = doc.createElement('div');

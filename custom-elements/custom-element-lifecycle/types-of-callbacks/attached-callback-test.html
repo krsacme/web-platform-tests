@@ -5,10 +5,10 @@
 <meta name="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <meta name="assert" content="attached callback ... must be enqueued whenever custom element is inserted into a document and this document has a browsing context.">
 <link rel="help" href="http://www.w3.org/TR/custom-elements/#types-of-callbacks">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -60,7 +60,7 @@ test(function() {
 }, 'Test attached callback if custom element is unregistered');
 
 
-testInIFrame('../../resources/x-element.html', function(doc) {
+testInIFrame('../..../../../resources/x-element.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
     assert_equals(proto.attachedCallbackCalledCounter, 1, 'Callback attached should be ' +
@@ -68,7 +68,7 @@ testInIFrame('../../resources/x-element.html', function(doc) {
 }, 'Test attached callback. Document has browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
 
@@ -83,7 +83,7 @@ testInIFrame('../../resources/blank.html', function(doc) {
     'Document has browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var x = doc.createElement('x-element');
     doc.body.appendChild(x);
     var proto = newHTMLElementPrototype();
@@ -94,7 +94,7 @@ testInIFrame('../../resources/blank.html', function(doc) {
     'Document has browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});
     doc.body.innerHTML = '<x-element></x-element>';
@@ -104,7 +104,7 @@ testInIFrame('../../resources/blank.html', function(doc) {
     'Document has browsing context');
 
 
-testInIFrame('../../resources/blank.html', function(doc) {
+testInIFrame('../..../../../resources/blank.html', function(doc) {
     doc.body.innerHTML = '<x-element></x-element>';
     var proto = newHTMLElementPrototype();
     doc.registerElement('x-element', {prototype: proto});

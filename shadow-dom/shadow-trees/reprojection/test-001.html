@@ -14,10 +14,10 @@ policies and contribution forms [3].
 <link rel="author" title="Sergey G. Grekhov" href="mailto:sgrekhov@unipro.ru">
 <link rel="help" href="http://www.w3.org/TR/2013/WD-shadow-dom-20130514/#reprojection">
 <meta name="assert" content="Reprojection: The nodes distributed into that insertion point must appear as if they were child nodes of the shadow host in the context of distribution within the shadow DOM subtree, hosted by said shadow host">
-<script src="/resources/testharness.js"></script>
-<script src="/resources/testharnessreport.js"></script>
+<script src="../../../resources/testharness.js"></script>
+<script src="../../../resources/testharnessreport.js"></script>
 <script src="../../testcommon.js"></script>
-<link rel="stylesheet" href="/resources/testharness.css">
+<link rel="stylesheet" href="../../../resources/testharness.css">
 </head>
 <body>
 <div id="log"></div>
@@ -26,7 +26,7 @@ var A_04_06_01_T01 = async_test('A_04_06_01_T01');
 
 A_04_06_01_T01.step(function () {
     var iframe = document.createElement('iframe');
-    iframe.src = '../../resources/blank.html';
+    iframe.src = '../..../../../resources/blank.html';
     document.body.appendChild(iframe);
 
     iframe.onload = A_04_06_01_T01.step_func(function () {
@@ -102,7 +102,7 @@ var A_04_06_01_T02 = async_test('A_04_06_01_T02');
 
 A_04_06_01_T02.step(function () {
     var iframe = document.createElement('iframe');
-    iframe.src = '../../resources/blank.html';
+    iframe.src = '../..../../../resources/blank.html';
     document.body.appendChild(iframe);
 
     iframe.onload = A_04_06_01_T02.step_func(function () {
